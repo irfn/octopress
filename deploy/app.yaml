@@ -11,6 +11,25 @@ handlers:
   static_files: public/index.html
   upload: public/index.html
 
+- url: /atom.xml
+  static_files: public/atom.xml
+  upload: public/atom.xml
+
+- url: /archives/
+  static_files: public/archives/index.html
+  upload: public/archives/index.html
+  
+- url: /blog/(.*)/(.*)/(.*)/(.*)/
+  static_files: public/blog/\1/\2/\3/\4/index.html
+  upload: public/blog/(.*)/(.*)/(.*)/(.*)
+
 - url: /
   static_dir: public
+
+- url: /archives/
+  static_dir: public/archives
+
+- url: /blog/(.*)/(.*)/(.*)/(.*)
+  static_dir: public/blog
+
 
